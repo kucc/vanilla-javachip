@@ -8,6 +8,8 @@ export default function SessionContainer() {
       Leader: "홍길동",
       check: true,
       category: "sessions",
+      level: "초급",
+      credit: 1,
       id: 1,
     },
     {
@@ -15,6 +17,8 @@ export default function SessionContainer() {
       Leader: "아무개",
       check: false,
       category: "sessions",
+      level: "초급",
+      credit: 1,
       id: 2,
     },
     {
@@ -22,6 +26,8 @@ export default function SessionContainer() {
       Leader: "뭐시기",
       category: "sessions",
       check: true,
+      level: "초급",
+      credit: 1,
       id: 3,
     },
   ];
@@ -35,6 +41,8 @@ export default function SessionContainer() {
           category={session.category}
           sessionLeader={session.Leader}
           check={session.check}
+          level={session.level}
+          credit={session.credit}
         />
       ))}
     </>

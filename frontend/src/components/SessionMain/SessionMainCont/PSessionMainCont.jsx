@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 import * as S from "../style";
 
@@ -12,8 +13,17 @@ function PSessionMainCont({
   people,
   placeHow,
   remember,
+  check,
+  category,
+  id,
 }) {
   const [nowState, setNowState] = useState("intro");
+  const history = useHistory();
+  const SmClick = () => {
+    check === true
+      ? window.alert("신청을 취소했습니다.")
+      : window.alert("세션을 등록했습니다.");
+  };
 
   return (
     <>
@@ -166,6 +176,14 @@ function PSessionMainCont({
           </S.SessionBottomBox>
         )}
       </S.SessionBottom>
+      <S.SmbtnCont>
+        <S.Smbtn
+          onClick={() => history.push(`/detail/${category}/${id}/attendance`)}
+        >
+          출결보기
+        </S.Smbtn>
+        <S.Smbtn onClick={SmClick}>신청하기</S.Smbtn>
+      </S.SmbtnCont>
     </>
   );
 }

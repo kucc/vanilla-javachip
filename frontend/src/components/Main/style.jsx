@@ -21,3 +21,4 @@ export const MainSessDuration = styled.div``;
 export const MainSessItem = styled.div``;
 export const MainSessTab = styled.div``;
 export const MainSessRig = styled.div``;
+export const SessionLevel = styled.div``;

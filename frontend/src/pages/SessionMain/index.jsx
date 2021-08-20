@@ -3,10 +3,11 @@ import { LeaderBox, SessionMainCont } from "../../components/SessionMain";
 
 function SessionMain({ match }) {
   const { category, id } = match.params;
+
   return (
     <>
       <LeaderBox />
-      <SessionMainCont />
+      <SessionMainCont category={category} id={id} />
     </>
   );
 }

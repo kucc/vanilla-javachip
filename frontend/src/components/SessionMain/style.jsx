@@ -25,3 +25,6 @@ export const SessionIntroItem = styled.div``;
 export const SessionIntroTitle = styled.div``;
 export const SessionLevel = styled.div``;
 export const SessionTitle = styled.div``;
+
+export const SmbtnCont = styled.div``;
+export const Smbtn = styled.div``;
