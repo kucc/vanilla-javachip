@@ -45,6 +45,23 @@ export const DetailApi = async (category,id) =>{
       return result.data;
     }
 
+export const AttendApi = async (category,id) =>{
+    const accessToken = localStorage.getItem('accessToken');
+    const result = await axios
+    .get(`http://3.36.95.15:8080/api/${category}/${id}`,{
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
+    .then((res)=>{
+        return res;
+        })
+        .catch((err)=>{
+        return false
+        });
+        return result.data;
+    }
+
 export const feedDetailApi = async (postId) =>{
     const accessToken = localStorage.getItem('accessToken');
     const result = await axios
