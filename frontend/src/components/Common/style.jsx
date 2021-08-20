@@ -6,6 +6,7 @@ export const NavBarContainer = styled.div`
 `;
 export const NavBarLogoContainer = styled.div``;
 export const NavBarAuth = styled.div``;
+export const NavBarAuthCont = styled.div``;
 export const NavBarMenuContainer = styled.div`
   display: flex;
 `;

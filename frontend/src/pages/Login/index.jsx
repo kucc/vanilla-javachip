@@ -1,6 +1,11 @@
 import React from "react";
+import { LoginBox } from "../../components/Login";
 
 function Login() {
-  return <>이건 로그인</>;
+  return (
+    <>
+      <LoginBox />
+    </>
+  );
 }
 export default Login;
