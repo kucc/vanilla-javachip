@@ -21,8 +21,8 @@ function App() {
           <Route path="/mypage/edit" component={MypageEdit}/>
           <Route path="/mypage" component={Mypage} />
           <Route path="/detail/:category/:id/attendance/edit"  component={SessionAttendEdit} />
-          <Route path="/detail/:category/:id/attendance"   exact component={SessionAttend} />
-          <Route path="/detail/:category/:id/main" component={SessionMain} />
+          <Route path="/detail/:category/:id/attendance" exact  component={SessionAttend} />
+          <Route path="/detail/:category/:id/" exact component={SessionMain} />
           <Route path="/rules" component={Rules} />
           <Route path="/" exact component={Main} />
         </Switch>

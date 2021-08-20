@@ -1,6 +1,13 @@
 import React from "react";
+import { LeaderBox, SessionMainCont } from "../../components/SessionMain";
 
-function SessionMain() {
-  return <>이건 세션메인</>;
+function SessionMain({ match }) {
+  const { category, id } = match.params;
+  return (
+    <>
+      <LeaderBox />
+      <SessionMainCont />
+    </>
+  );
 }
 export default SessionMain;
