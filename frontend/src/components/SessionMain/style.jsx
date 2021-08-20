@@ -17,11 +17,16 @@ export const SessionCurriItem = styled.div``;
 export const SessionCurriTitle = styled.div``;
 export const SessionEdit = styled.div``;
 export const SessionHeader = styled.div``;
+export const StudyHeader = styled.div``;
 export const SessionHeaderCont = styled.div``;
 export const SessionHeaderItem = styled.div``;
+export const StudyHeaderItem = styled.div``;
 export const SessionImg = styled.div``;
 export const SessionIntroExplain = styled.div``;
 export const SessionIntroItem = styled.div``;
 export const SessionIntroTitle = styled.div``;
 export const SessionLevel = styled.div``;
 export const SessionTitle = styled.div``;
+
+export const SmbtnCont = styled.div``;
+export const Smbtn = styled.div``;

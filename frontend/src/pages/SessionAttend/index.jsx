@@ -1,6 +1,12 @@
 import React from "react";
+import { SAcontainer } from "../../components/SessionAttend";
 
-function SessionAttend() {
-  return <>이건 세션 어탠스</>;
+function SessionAttend({ match }) {
+  const { category, id } = match.params;
+  return (
+    <>
+      <SAcontainer category={category} id={id} />
+    </>
+  );
 }
 export default SessionAttend;

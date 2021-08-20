@@ -6,6 +6,7 @@ export default function LeaderBox() {
     name: "박가영",
     intro: "안녕하세요",
     link: "rkdud007",
+    leaderId: 1,
   };
   return (
     <>

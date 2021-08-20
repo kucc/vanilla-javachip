@@ -2,7 +2,15 @@ import React from "react";
 import { useHistory } from "react-router";
 import * as S from "../style";
 
-function PSessionContainer({ title, category, Leader, check, id }) {
+function PSessionContainer({
+  title,
+  category,
+  Leader,
+  check,
+  id,
+  level,
+  credit,
+}) {
   const history = useHistory();
   return (
     <>
@@ -21,6 +29,11 @@ function PSessionContainer({ title, category, Leader, check, id }) {
               <p>{Leader} 세션장</p>
             </S.SessionExplain>
           </S.SessionText>
+          <S.SessionLevel>
+            <p>
+              난이도:{level} /{credit}학점
+            </p>
+          </S.SessionLevel>
           {check ? (
             <S.SessionFavorite>수강중</S.SessionFavorite>
           ) : (

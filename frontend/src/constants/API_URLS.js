@@ -6,9 +6,9 @@ const API_URLS = {
     SIGNOUT: 'api/users/', // + userId (회원탈퇴)
     PROFILE_GET: 'api/users/', // + userId (프로필 조회)
     PROFILE_PUT: 'api/users/', // + userId (프로필 수정)
-    MAIN_TOTAL: 'api/classes', 
-    MAIN_SESSION: 'api/classes/sessions',
-    MAIN_STUDIES: 'api/classes/studies',
+    MAIN_TOTAL: 'api/main', 
+    MAIN_SESSION: 'api/main/sessions',
+    MAIN_STUDIES: 'api/main/studies',
     SEARCH: 'api/classes/search', // + ?query=한글 (세션검색)
     DETAIL_SESSION : 'api/classes', //+ sessionID (세션 조회)
     DETAIL_SE_DEL : 'api/classes', //+ sessionID (세션 삭제)

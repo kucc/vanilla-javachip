@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRecoilState } from "recoil";
+import { userState } from "../../../recoil/userState";
 import SessionContainer from "../SessionContainer";
 import * as S from "../style";
 
 function PMainBottomContainer() {
+  const [search, setSearch] = useState(useRecoilState(userState).category);
   return (
     <>
       <S.MainBottomWrapper>
@@ -12,13 +15,13 @@ function PMainBottomContainer() {
           </S.MainSessDuration>
           <S.MainSessTab>
             <S.MainSessItem>
-              <p>전체</p>
+              <p onClick={() => setSearch("total")}>전체</p>
             </S.MainSessItem>
             <S.MainSessItem>
-              <p>세션</p>
+              <p onClick={() => setSearch("session")}> 세션</p>
             </S.MainSessItem>
             <S.MainSessItem>
-              <p>스터디</p>
+              <p onClick={() => setSearch("studies")}>스터디</p>
             </S.MainSessItem>
           </S.MainSessTab>
           <S.MainSessRig>

@@ -1,6 +1,11 @@
 import React from "react";
+import { SignupBox } from "../../components/Signup";
 
 function Signup() {
-  return <>이건 회원가입ㄴ</>;
+  return (
+    <>
+      <SignupBox />
+    </>
+  );
 }
 export default Signup;

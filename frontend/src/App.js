@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
+import {RecoilRoot} from 'recoil';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Main from './pages/Main';
@@ -14,6 +15,7 @@ import SessionMain from './pages/SessionMain';
 function App() {
   return (
     <>
+    <RecoilRoot>
         <GlobalStyle />
         <Switch>
           <Route path="/login" component={ Login } />
@@ -26,6 +28,7 @@ function App() {
           <Route path="/rules" component={Rules} />
           <Route path="/" exact component={Main} />
         </Switch>
+        </RecoilRoot>
     </>
   );
 }
