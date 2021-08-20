@@ -5,26 +5,35 @@ export default function SessionContainer() {
   const dummySession = [
     {
       title: "세션1",
-      sessionLeader: "홍길동",
+      Leader: "홍길동",
       check: true,
+      category: "sessions",
+      id: 1,
     },
     {
       title: "세션2",
-      sessionLeader: "아무개",
+      Leader: "아무개",
       check: false,
+      category: "sessions",
+      id: 2,
     },
     {
       title: "세션3",
-      sessionLeader: "뭐시기",
+      Leader: "뭐시기",
+      category: "sessions",
       check: true,
+      id: 3,
     },
   ];
   return (
     <>
       {dummySession.map((session) => (
         <PSessionContainer
+          key={session.id + session.category}
+          id={session.id}
           title={session.title}
-          sessionLeader={session.sessionLeader}
+          category={session.category}
+          sessionLeader={session.Leader}
           check={session.check}
         />
       ))}
