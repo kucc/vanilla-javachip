@@ -19,6 +19,7 @@ export default function SignupBox() {
             if (data) {
               window.alert(" 회원가입에 성공!");
               setLoginState({
+                ...loginState,
                 isLogin: true,
                 name: data.name,
                 userId: data.id,

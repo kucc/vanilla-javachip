@@ -15,6 +15,7 @@ export default function LoginBox() {
       if (data) {
         window.alert("로그인에 성공!");
         setLoginState({
+          ...loginState,
           isLogin: true,
           name: data.name,
           userId: data.id,

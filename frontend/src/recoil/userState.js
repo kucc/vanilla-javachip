@@ -7,6 +7,7 @@ export const userState = atom({
         isLogin: false,
         name : null,
         userId:null,
+        category:null,
     },
     effects_UNSTABLE: [persistAtom],
 })

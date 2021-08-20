@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { userState } from "../../../recoil/userState";
+import { mainTotalApi } from "../../../utils";
 import PSessionContainer from "./PSessionContainer";
 
 export default function SessionContainer() {
+  const [sessions, setSessions] = useState([]);
+  const search = useRecoilValue(userState).category;
   const dummySession = [
     {
       title: "세션1",
@@ -31,6 +36,28 @@ export default function SessionContainer() {
       id: 3,
     },
   ];
+  useEffect(() => {
+    getFeedList();
+  }, []);
+  const getFeedList = async () => {
+    try {
+      let result = "";
+      if (search === "total") {
+        result = await mainTotalApi("total");
+      } else if (search === "session") {
+        result = await mainTotalApi("session");
+      } else if (search === "studies") {
+        result = await mainTotalApi("studies");
+      }
+      if (result) {
+        setSessions(result);
+      }
+    } catch (e) {
+      console.log(e.response.data.error.msg);
+      alert(e.response.data.error.msg);
+    }
+  };
+
   return (
     <>
       {dummySession.map((session) => (
