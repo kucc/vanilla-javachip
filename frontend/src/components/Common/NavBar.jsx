@@ -40,25 +40,26 @@ export default function NavBar() {
         <Link to="/">
           <p>kucc</p>
         </Link>
+        <Link to="/rules">
+          <p>공지사항</p>
+        </Link>
       </S.NavBarLogoContainer>
       <S.NavBarMenuContainer>
-        <S.NavBarAuthCont>
-          {loginState === true ? (
-            <S.NavBarAuth onClick={logout}>
-              <p>{username} 님 안녕하세요</p>
-              <p>로그아웃</p>
-            </S.NavBarAuth>
-          ) : (
-            <S.NavBarAuth>
-              <Link to="/signup">
-                <p>회원가입</p>
-              </Link>
-              <Link to="/login">
-                <p>로그인</p>
-              </Link>
-            </S.NavBarAuth>
-          )}
-        </S.NavBarAuthCont>
+        {loginState === true ? (
+          <S.NavBarAuth onClick={logout}>
+            <p>{username} 님 안녕하세요</p>
+            <p>로그아웃</p>
+          </S.NavBarAuth>
+        ) : (
+          <S.NavBarAuth>
+            <Link to="/login">
+              <p>LOGIN</p>
+            </Link>
+            <Link to="/signup">
+              <p>JOIN</p>
+            </Link>
+          </S.NavBarAuth>
+        )}
       </S.NavBarMenuContainer>
     </S.NavBarContainer>
   );
