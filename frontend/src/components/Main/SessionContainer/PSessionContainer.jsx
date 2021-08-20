@@ -1,10 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router";
 import * as S from "../style";
 
-function PSessionContainer({ title, sessionLeader, check }) {
+function PSessionContainer({ title, category, Leader, check, id }) {
+  const history = useHistory();
   return (
     <>
-      <S.SessionContainer>
+      <S.SessionContainer
+        onClick={() => history.push(`/detail/${category}/${id}`)}
+      >
         <S.SessionImg>
           {/* 이사이에 이미지 <img > 로 받아온 이미지 나중에 집어넣을 예정 */}
         </S.SessionImg>
@@ -14,7 +18,7 @@ function PSessionContainer({ title, sessionLeader, check }) {
               <p>{title}</p>
             </S.SessionTitle>
             <S.SessionExplain>
-              <p>{sessionLeader} 세션장</p>
+              <p>{Leader} 세션장</p>
             </S.SessionExplain>
           </S.SessionText>
           {check ? (

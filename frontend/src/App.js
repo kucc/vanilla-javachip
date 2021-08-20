@@ -20,9 +20,9 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/mypage/edit" component={MypageEdit}/>
           <Route path="/mypage" component={Mypage} />
-          <Route path="/session/:id/attendance/edit"  component={SessionAttendEdit} />
-          <Route path="/session/:id/attendance"   exact component={SessionAttend} />
-          <Route path="/session/:id/main" component={SessionMain} />
+          <Route path="/detail/:category/:id/attendance/edit"  component={SessionAttendEdit} />
+          <Route path="/detail/:category/:id/attendance"   exact component={SessionAttend} />
+          <Route path="/detail/:category/:id/main" component={SessionMain} />
           <Route path="/rules" component={Rules} />
           <Route path="/" exact component={Main} />
         </Switch>

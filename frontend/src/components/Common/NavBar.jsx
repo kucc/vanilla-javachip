@@ -14,6 +14,11 @@ export default function NavBar() {
       </S.NavBarLogoContainer>
       <S.NavBarMenuContainer>
         <S.NavBarAuth>
+          <Link to="/rules">
+            <p>공지사항</p>
+          </Link>
+        </S.NavBarAuth>
+        <S.NavBarAuth>
           <p> 안녕하세요</p>
           <p>로그아웃</p>
         </S.NavBarAuth>
