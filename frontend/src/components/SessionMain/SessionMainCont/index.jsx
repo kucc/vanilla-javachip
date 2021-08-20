@@ -1,7 +1,17 @@
 import React from "react";
 import PSessionMainCont from "./PSessionMainCont";
 
-export default function SessionMainCont({ category, id }) {
+export default function SessionMainCont({
+  category,
+  id,
+  // title,
+  // explain,
+  // goal,
+  // difficulty,
+  // credit,
+  // progress,
+  // notice,
+}) {
   const {
     title,
     level,

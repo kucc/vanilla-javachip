@@ -28,11 +28,10 @@ export const  mainTotalApi= async (category) => {
       return data;
       };
 
-export const feedDeleteApi = async (postId) =>{
+export const DetailApi = async (category,id) =>{
     const accessToken = localStorage.getItem('accessToken');
-   
     const result = await axios
-    .delete(`http://3.36.95.15:8080/api/board/${postId}`,{
+    .get(`http://3.36.95.15:8080/api/${category}/${id}`,{
         headers: {
             Authorization: `Bearer ${accessToken}`
         }
